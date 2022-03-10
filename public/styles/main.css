@@ -1,0 +1,106 @@
+:root {
+    --black: #0d114f;
+    --white: #FAFAFA;
+    --red: #E83F5B;
+    --lightBlue: #E0ECFF;
+    --blue: #3485FF;
+    --background: #F6FAFF;
+    --overlay: #040911;
+    --iconsDetails: #A5B0C1;
+
+    --greyDark: #4D5E77;
+    --greyBlue: #A1B2CD;
+    --greyMedium: #EAECF2;
+    --greyLight: #E5EAF1;
+
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: var(--background);
+}
+
+body, input, button, textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-size: clamp(14px, 1.6rem, 2vw);
+    -webkit-tap-highlight-color: transparent;
+}
+
+input, button, .button {
+    height: 5rem;
+    border-radius: .8rem;
+}
+
+button, .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    line-height: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--white);
+    background: var(--blue);
+    cursor: pointer;
+    transition: filter .2s;
+}
+
+button:hover, .button:hover {
+    filter: brightness(1.2);
+}
+
+button > img, .button > img {
+    width: 2rem;
+}
+
+button.outlined, .button.outlined {
+    color: var(--blue);
+    background: transparent;
+    border: .2rem solid var(--blue);
+}
+
+button.red, .button.red {
+    color: var(--white);
+    background: var(--red);
+}
+
+button.grey, .button.grey {
+    color: var(--greyDark);
+    background: var(--greyLight);
+}
+
+.content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.content header {
+    width: 80%;
+    margin: 3.5rem auto;
+}
+
+.content header img {
+    width: 16.7rem;
+}

@@ -1,0 +1,151 @@
+.content {
+    max-width: min(112rem, 90%);
+}
+
+#room header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#room header .buttons {
+    display: flex;
+    gap: .8rem;
+}
+
+#room header .button {
+    display: flex;
+    gap: 1.16rem;
+}
+
+#room header .button:first-of-type {
+    padding: 1.3rem 1.6rem;
+}
+
+#room header .button:last-of-type {
+    padding: 1.3rem 3.2rem;
+}
+
+#room header .buttons .button img {
+    width: 2rem;
+}
+
+#question-form h2 {
+    margin-bottom: 2.4rem;
+    line-height: 4.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    color: var(--black);
+}
+
+#question-form form {
+    margin-bottom: 1.6rem;
+    padding: 1.6rem;
+    border: .2rem solid var(--greyBlue);
+    border-radius: 0 .8rem .8rem .8rem;
+}
+
+#question-form form textarea {
+    width: 100%;
+    background: transparent;
+    outline: none;
+    resize: none;
+}
+
+#question-form form textarea::placeholder {
+    color: var(--greyBlue);
+}
+
+#question-form form footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#question-form form footer > div {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    color: var(--iconsDetails);
+}
+
+#question-form form footer button {
+    height: auto;
+    padding: .8rem 2.4rem;
+    line-height: 2.4rem;
+}
+
+.question-wrapper {
+    margin-bottom: .8rem;
+    padding: 2.4rem;
+    background: var(--lightBlue);
+    border-radius: 0 .8rem .8rem .8rem;
+}
+
+.question-wrapper .question-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.6rem;
+}
+
+.question-wrapper .question-content p {
+    display: flex;
+    align-items: center;
+    min-height: 5.2rem;
+    word-break: break-all;
+}
+
+.question-wrapper .question-content .user {
+    padding: 1.4rem;
+    background: var(--blue);
+    clip-path: circle();
+}
+
+.question-wrapper .actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.question-wrapper .actions > a {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.question-wrapper.read {
+    background: var(--greyMedium);
+}
+
+.question-wrapper.read .question-content .user {
+    background: var(--greyBlue);
+}
+
+.no-questions {
+    margin-top: 5.2rem;
+    text-align: center;
+}
+
+.no-questions img {
+    max-width: 100%;
+    margin-bottom: 1.2rem;
+}
+
+.no-questions p {
+    line-height: 1.9rem;
+}
+
+.no-questions p:first-of-type {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.no-questions p:last-of-type {
+    margin-top: 1.3rem;
+    font-size: 1.4rem;
+}
