@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE-Edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Rocket.Q - Perguntas e Respostas</title>
+        <title>Rocket.Q - Questions and Answers</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
         <link href="/styles/main.css" rel="stylesheet" />
@@ -20,35 +20,35 @@
                 <div class="buttons">
                     <div id="room-id" class="button outlined" data-id="<%= roomId %>">
                         <%= roomId %>
-                        <img src="/images/copy.svg" alt="Copiar código da sala" /> 
+                        <img src="/images/copy.svg" alt="Copy room code" /> 
                     </div>
     
                     <a href="/create-room" class="button">
-                        <img src="/images/users-white.svg" alt="Criar sala" />
-                        Criar sala
+                        <img src="/images/users-white.svg" alt="Create Room" />
+                        Create Room
                     </a>
                 </div>
             </header>
 
             <main>
                 <section id="question-form">
-                    <h2>Faça sua pergunta</h2>
+                    <h2>Ask your question</h2>
 
                     <form action="/question/create/<%= roomId %>" method="POST">
-                        <label class="sr-only" for="question">O que você quer perguntar?</label>
-                        <textarea id="question" name="question" placeholder="O que você quer perguntar?"></textarea>
+                        <label class="sr-only" for="question">What do you want to ask?</label>
+                        <textarea id="question" name="question" placeholder="What do you want to ask?"></textarea>
                         <footer>
                             <div>
-                                <img src="/images/lock.svg" alt="Cadeado" />
-                                Esta pergunta é anônima
+                                <img src="/images/lock.svg" alt="Padlock" />
+                                This question is anonymous
                             </div>
-                            <button>Enviar</button>
+                            <button>Submit</button>
                         </footer>
                     </form>
                 </section>
 
                 <section id="questions">
-                    <h2 class="sr-only">Perguntas da comunidade</h2> 
+                    <h2 class="sr-only">Community questions</h2> 
                     <div class="questions">
 
                         <% if(!isQuestions) { %>
@@ -68,12 +68,12 @@
                                 </div>
                                 <div class="actions">
                                     <a class="check" href="#" data-id="<%= question.id %>">
-                                        <img src="/images/check.svg" alt="Marcar como lida" />
-                                        Marcar como lida
+                                        <img src="/images/check.svg" alt="Mark as read" />
+                                        Mark as read
                                     </a>
                                     <a class="delete" href="#" data-id="<%= question.id %>">
-                                        <img src="/images/trash.svg" alt="Excluir" />
-                                        Excluir
+                                        <img src="/images/trash.svg" alt="Delete" />
+                                        Delete
                                     </a>
                                 </div>
                             </div>
@@ -92,8 +92,8 @@
                                 </div>
                                 <div class="actions">
                                     <a class="delete" href="#" data-id="<%= questionRead.id %>">
-                                        <img src="/images/trash.svg" alt="Excluir" />
-                                        Excluir
+                                        <img src="/images/trash.svg" alt="Delete" />
+                                        Delete
                                     </a>
                                 </div>
                             </div>
@@ -106,16 +106,16 @@
 
         <div class="modal-wrapper">
             <div class="modal">
-                <h2>Título</h2>
-                <p>Descrição</p>
+                <h2>Title</h2>
+                <p>Description</p>
 
                 <form action="#" method="POST">
-                    <label class="sr-only" for="password">Digite sua senha admin</label>
-                    <input id="password" type="password" name="password" placeholder="Digite sua senha" />
+                    <label class="sr-only" for="password">Enter your admin password</label>
+                    <input id="password" type="password" name="password" placeholder="Type your password" />
 
                     <div class="buttons">
-                        <button class="cancel grey" type="button">Cancelar</button>
-                        <button class="red">Sim, excluir</button>
+                        <button class="cancel grey" type="button">Cancel</button>
+                        <button class="red">Yes, delete</button>
                     </div>
                 </form>
             </div>

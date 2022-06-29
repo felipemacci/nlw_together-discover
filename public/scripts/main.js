@@ -10,7 +10,7 @@ function initModal() {
     const modalButton = document.querySelector('.modal button:last-of-type')
 
     function handleClick(event, check) {
-        const text = check ? 'Marcar como lida' : 'Excluir'
+        const text = check ? 'Mark as read' : 'Delete'
         const slug = check ? 'check' : 'delete'
         const roomId = document.querySelector('#room-id').dataset.id
         const questionId = event.target.dataset.id
@@ -19,8 +19,8 @@ function initModal() {
         form.setAttribute('action', `/question/${roomId}/${questionId}/${slug}`)
 
         modalTitle.innerHTML = text
-        modalDescription.innerHTML = `Tem certeza que deseja ${text.toLowerCase()} esta pergunta?`
-        modalButton.innerHTML = `Sim, ${text.toLowerCase()}`
+        modalDescription.innerHTML = `Are you sure you want to ${text.toLowerCase()} this question?`
+        modalButton.innerHTML = `Yes, ${text.toLowerCase()}`
 
         check ? modalButton.classList.remove('red') : modalButton.classList.add('red')
 
